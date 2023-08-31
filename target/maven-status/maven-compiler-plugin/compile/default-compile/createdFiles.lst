@@ -1,0 +1,5 @@
+ifmt\cba\vo\ProdutoVO.class
+ifmt\cba\App.class
+ifmt\cba\servico\ServicoControleEstoque.class
+ifmt\cba\negocio\GerenciadorEstoque.class
+ifmt\cba\servico\ServicoControleEstoqueImpl.class

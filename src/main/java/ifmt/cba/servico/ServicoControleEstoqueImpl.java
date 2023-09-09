@@ -14,6 +14,16 @@ public class ServicoControleEstoqueImpl implements ServicoControleEstoque {
         this.gerenciadorEstoque = new GerenciadorEstoque();
     }
 
+     @Override
+    public float totalizarValorEstoqueProduto(ProdutoVO produtoVO, int quantidade, float valorUnitario) throws Exception {
+        return this.gerenciadorEstoque.totalizarValorEstoqueProduto(produtoVO, quantidade, valorUnitario);
+    }
+
+    @Override
+    public float totalizarValorEstoqueGeral()throws Exception{
+        return this.gerenciadorEstoque.totalizarValorEstoqueGeral();
+    }
+
     @Override
     public void adicionarProduto(ProdutoVO produtoVO) throws Exception {
         this.gerenciadorEstoque.adicionarProduto(produtoVO);
@@ -54,5 +64,7 @@ public class ServicoControleEstoqueImpl implements ServicoControleEstoque {
     public int totalEstoqueFisico() {
         return this.gerenciadorEstoque.totalEstoqueFisico();
     }
-
+    
+   
+    
 }

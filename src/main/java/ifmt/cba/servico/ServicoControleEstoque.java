@@ -12,7 +12,12 @@ import jakarta.jws.soap.SOAPBinding.Style;
 public interface ServicoControleEstoque {
     @WebMethod()
     public void adicionarProduto(ProdutoVO produtoVO) throws Exception;
+    @WebMethod
+    public float totalizarValorEstoqueProduto(ProdutoVO produtoVO, int quantidade, float valorUnitario) throws Exception;
 
+    @WebMethod
+    public float totalizarValorEstoqueGeral()throws Exception;
+    
     @WebMethod()
     public void removerProduto(ProdutoVO produtoVO) throws Exception;
 
@@ -33,5 +38,7 @@ public interface ServicoControleEstoque {
 
     @WebMethod()
     public int totalEstoqueFisico();
+
+
 
 }

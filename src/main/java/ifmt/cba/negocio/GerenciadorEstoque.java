@@ -23,6 +23,22 @@ public class GerenciadorEstoque {
             throw new Exception("produto nao pode ser nulo");
         }
     }
+    public float totalizarValorEstoqueProduto(ProdutoVO produtoVO, int quantidade, float valorUnitario) throws Exception {
+        if (produtoVO != null &&  quantidade> 0 && valorUnitario > 0) {
+            return quantidade * valorUnitario;
+        } else {
+            throw new Exception("Produto inválido para o cálculo do valor total do estoque");
+        }
+    }
+
+    public float totalizarValorEstoqueGeral() throws Exception{
+        float total = 0;
+      for(ProdutoVO produto : this.listaProduto){
+        total += produto.getEstoque() * produto.getValorUnitario();
+      }
+      return total;
+    }
+    
 
     public void removerProduto(ProdutoVO produtoVO) throws Exception {
         if (produtoVO != null) {
